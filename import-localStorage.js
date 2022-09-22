@@ -1,0 +1,1 @@
+javascript:(function() { var d = window.prompt(""); if (d != null) { try { d = JSON.parse(d); if (typeof(d) != 'object') { throw new SyntaxError(); } for (p in d) { localStorage.setItem(p, d[p]); } window.alert('Data imported'); } catch(SyntaxError) { window.alert('Invalid data provided'); return; } } })();
